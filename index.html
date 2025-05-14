@@ -31,13 +31,13 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#home">Condensed Matter Theory and Simulation Group</a>
+      <a class="navbar-brand" href="#home">CMTSG</a>
       <div>
         <a class="text-white" href="#home">Home</a>
-        <a class="text-white" href="#people">People</a>
         <a class="text-white" href="#research">Research</a>
         <a class="text-white" href="#publications">Publications</a>
-        <a class="text-white" href="#news">News</a>
+        <a class="text-white" href="#people">People</a>
+        <a class="text-white" href="#news">News & Events</a>
         <a class="text-white" href="#opportunities">Opportunities</a>
         <a class="text-white" href="#contact">Contact</a>
       </div>
@@ -50,17 +50,6 @@
       <h1 class="display-4">Condensed Matter Theory and Simulation Group</h1>
       <p class="lead">Our mission is to explore cutting-edge research in theoretical and computational condensed matter physics.</p>
       <img src="/mnt/data/25a72aa2-5b5d-42c0-88f3-98f09b54b9fc.png" alt="Lab Banner" class="img-fluid">
-    </div>
-  </section>
-
-  <!-- People -->
-  <section id="people">
-    <div class="container">
-      <h2>People</h2>
-      <p><strong>PI:</strong> Prof. XXXXXX</p>
-      <p><strong>Postdocs:</strong> Name1, Name2</p>
-      <p><strong>PhD Students:</strong> Name3, Name4</p>
-      <p><strong>Alumni:</strong> Name5 (Now at XYZ)</p>
     </div>
   </section>
 
@@ -88,7 +77,22 @@
     </div>
   </section>
 
-  <!-- News -->
+  <!-- People -->
+  <section id="people" class="bg-light">
+    <div class="container">
+      <h2>People</h2>
+      <h5>Principal Investigator</h5>
+      <ul><li>Dr. [Name] – PI</li></ul>
+      <h5>Postdoctoral Researchers</h5>
+      <ul><li>Dr. [Name 1]</li><li>Dr. [Name 2]</li></ul>
+      <h5>PhD Students</h5>
+      <ul><li>[Name 1]</li><li>[Name 2]</li></ul>
+      <h5>Alumni</h5>
+      <ul><li>[Name], Current Position</li></ul>
+    </div>
+  </section>
+
+  <!-- News & Events -->
   <section id="news" class="bg-light">
     <div class="container">
       <h2>News & Events</h2>
@@ -112,7 +116,11 @@
   <section id="contact" class="bg-light">
     <div class="container">
       <h2>Contact</h2>
-      <p>Email: yourname@university.edu</p>
+      <p>Email: <span id="email"></span></p>
+      <script>
+        const e = ['yourname','university.edu'];
+        document.getElementById('email').innerHTML = `<a href="mailto:${e[0]}@${e[1]}">${e[0]}@${e[1]}</a>`;
+      </script>
       <p>Address: Department of XYZ, University Name, City, Country</p>
       <p>
         <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
